@@ -50,7 +50,7 @@ body {
   background-color: var(--primary-color-dark);
 }
 
-.nav-bar {
+.nav__bar {
   position: fixed;
   width: 100%;
   max-width: var(--max-width);
@@ -58,7 +58,7 @@ body {
   z-index: 9;
 }
 
-.nav-header {
+.nav__header {
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -66,19 +66,19 @@ body {
   background-color: var(--primary-color);
 }
 
-.nav-logo a {
+.nav__logo a {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--white);
 }
 
-.nav-menu__btn {
+.nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
 }
 
-.nav-links {
+.nav__links {
   position: absolute;
   top: 100%;
   left: 0;
@@ -95,44 +95,284 @@ body {
   transform: translateY(-100%);
 }
 
-.nav-links.open {
+.nav__links.open {
   transform: translateY(0);
 }
 
-.nav-links a {
+.nav__links a {
   color: var(--primary-color-light);
 }
 
-.nav-links a:hover {
+.nav__links a:hover {
   color: var(--white);
 }
 
-/* Responsive */
+.header__container img {
+  max-width: 200px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.header__container h1 {
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  color: var(--white);
+  text-align: center;
+}
+
+.header__container h1 span {
+  background-image: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__container p {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--primary-color-light);
+  text-align: center;
+}
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header__btns .btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+  border-radius: 5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__btns a {
+  padding: calc(0.75rem - 2px) calc(1.5rem - 2px);
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: var(--white);
+  background-color: transparent;
+  border-radius: 5rem;
+  border: 2px solid var(--white);
+}
+
+.header__btns a:hover {
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+}
+
+.skill__container {
+  padding-block: 0;
+}
+
+.skill__container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.skill__flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.skill__flex span {
+  font-size: 2.5rem;
+  background: var(--gradient-2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project__container h2 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(
+    to right bottom,
+    #f77d6b 25%,
+    var(--primary-color-dark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.project__grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.project__card {
+  max-width: 450px;
+  margin-inline: auto;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.project__card__details {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project__card__details p {
+  color: var(--primary-color-light);
+}
+
+.project__card__details h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.project__card__details a {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+.experience__container h2 {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(
+    to right bottom,
+    #9e1fdb 25%,
+    var(--primary-color-dark)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.experience__list {
+  display: grid;
+  gap: 3rem;
+}
+
+.experience__header {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.experience__header div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.experience__header img {
+  max-width: 25px;
+}
+
+.experience__header h4 {
+  font-display: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.experience__header p {
+  color: var(--primary-color-light);
+  white-space: nowrap;
+}
+
+.experience__list li p {
+  color: var(--primary-color-light);
+}
+
+footer {
+  background-color: var(--primary-color);
+}
+
+.footer__container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.footer__container p {
+  margin-bottom: 1rem;
+  color: var(--primary-color-light);
+}
+
+.footer__container .mail__to a {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-color-light);
+}
+
+.mail__to a span {
+  font-size: 1rem;
+}
+
+.footer__container .mail__to:hover a {
+  color: var(--white);
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  font-size: 1.25rem;
+  color: var(--primary-color-light);
+}
+
+.footer__socials a:hover {
+  color: var(--white);
+}
 
 @media (width > 768px) {
   nav {
     background-color: var(--primary-color);
   }
 
-  .nav-bar {
+  .nav__bar {
     position: static;
     padding: 1.75rem 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
   }
 
-  .nav-header {
+  .nav__header {
     padding: 0;
     background-color: transparent;
   }
 
-  .nav-menu-btn {
+  .nav__menu__btn {
     display: none;
   }
 
-  .nav-links {
+  .nav__links {
     position: static;
     padding: 0;
     flex-direction: row;
@@ -141,5 +381,13 @@ body {
     background-color: transparent;
     transform: none;
     z-index: 1;
+  }
+
+  .skill__flex {
+    gap: 2rem;
+  }
+
+  .project__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
